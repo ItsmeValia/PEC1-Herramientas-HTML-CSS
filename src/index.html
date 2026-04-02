@@ -4,35 +4,40 @@
 <meta charset="utf-8" />
 <title>Cooking with Cooking Mama </title>
 <link rel="stylesheet" href="css/styles.css">
-<!-- <link rel="icon" type="imagen/svg" href="img/favicon.png" /> -->
+<link rel="icon" type="img/png" href="img/mama-icon.png" />
 </head>
 <body>
     <script src="app.js"></script>
 
-    <header>
+    <!-- <header>
         <include src="partials/header.html"></include>
-    </header>
+    </header> -->
         
 <main>
 
-    <div class="intro">
+    <section id="titulo" class="intro degradado">
         <p class="label">Nintendo DS · 2006</p>
-        <h1>Cooking with</h1>
-        <h1 class="cm">Cooking Mama</h1>
-        <caption>¡Vamos a cocinar!
-            <br> Aquí encontrarás las 76 recetas del juego de cocinar más querido de la Nintendo DS</caption>
-
+        <div class="logo">
+            <h1>Cooking with</h1>
+            <img src="https://static.wikia.nocookie.net/logopedia/images/b/b4/Cooking_Mama_%28video_game%29.png/revision/latest/scale-to-width-down/1000?cb=20230316021520" alt="Cooking Mama Logo">  
+        </div>
+        
+        <div class="intro">
+            <p>¡Vamos a cocinar!</p>
+            <p> Aquí encontrarás las 76 recetas del juego de cocinar más querido de la Nintendo DS</p>
+        </div>
+        
         <div class="botones-nav">
-            <button><a class="interno" href="#info-juego">Sobre el juego</a></button>
-            <button><a class="interno" href="#recetas">Recetario</a></button>
-            <button><a class="interno" href="#info-saga">La saga</a></button>      
-            <button><a class="interno" href="links.html">Enlaces</a></button>   
+            <a class="button interno" href="#info-juego">Sobre el juego</a>
+            <a class="button interno" href="#recetas">Recetario</a>
+            <a class="button interno" href="#info-saga">La saga</a>      
+            <a class="button externo" href="links.html">Enlaces</a>   
         </div>
 
-    </div>
+    </section>
 
 
-    <section id="info-juego" class="info-juego">
+    <section id="info-juego" class="info-juego cuadros">
         <h2>¿Qué es Cooking Mama?</h2>
         <p>El juego de cocina más adorable de Nintendo que inspiró a toda una generación de chefs</p>
         <blockquote cite="https://www.nintendo.com/es-es/Juegos/Nintendo-DS/Cooking-Mama-270330.html">
@@ -49,7 +54,7 @@
             
 
         <div>
-            <ul>
+            <ul class="grid">
                 <li class="info-rojo">
                     <h3>El juego</h3>
                     <p>Cooking Mama, es un juego de simulación de cocina para la Nintendo DS desarrollado por Office Create Corp.
@@ -88,9 +93,9 @@
         </div>
     </section>
 
-    <section id="recetas" class="recetas">
+    <section id="recetas" class="recetas liso">
         <h2>Recetarios</h2>        
-        <ul class="libros">
+        <ul class="libros grid">
             <li class="libro libro-rojo">
                 <a href="categoria1.html">
                     <div class="libro-cubierta">
@@ -268,81 +273,81 @@
     </section>
 
 
-    <section id="info-saga" class="info-saga">
+    <section id="info-saga" class="info-saga cuadros">
         <h2>Sobre la saga</h2>
 
         <div class="sagas">
             <h3>Saga original</h3>
-            <ul>
+            <ul class="grid">
                 <li>
                     <img src="./img/cooking-mama-nintendo-ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama DS">
                     <div class="saga-info">
-                        <h4>Cooking Mama (DS)</h4>
                         <p class="label">2006</p>
+                        <h4>Cooking Mama (DS)</h4>
                         <p>El punto de partida de toda la saga que sentó las bases del género con sus minijuegos simples.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-2-dinner-with-friends-nintendo-ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 2">
                     <div class="saga-info">
-                        <h4>Cooking Mama 2: Dinner with Friends (DS)</h4>
                         <p class="label">2007</p>
+                        <h4>Cooking Mama 2: Dinner with Friends (DS)</h4>
                         <p>Juego multijugador donde conoces a los amigos de Mamá y decora tus recetas con stikers.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-3-shop-and-chop-nintendo-ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 3">
                     <div class="saga-info">
-                        <h4>Cooking Mama 3: Shop & Chop (DS)</h4>
                         <p class="label">2009</p>
+                        <h4>Cooking Mama 3: Shop & Chop (DS)</h4>
                         <p>Encarnando a la hija de Mamá, puedes ir al supermercado y comprar los ingredientes para preparar tus recetas.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-4-kitchen-magic-nintendo-3ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 4">
                     <div class="saga-info">
-                        <h4>Cooking Mama 4: Kitchen Magic (3DS)</h4>
                         <p class="label">2011</p>
+                        <h4>Cooking Mama 4: Kitchen Magic (3DS)</h4>
                         <p>El primero de la saga en salir para la 3DS, en la preventa del juego podías conseguir un peluche de Mamá.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-5-bon-appetit-nintendo-3ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 5">
                     <div class="saga-info">
-                        <h4>Cooking Mama 5: Bon Appétit! (3DS)</h4>
                         <p class="label">2013</p>
+                        <h4>Cooking Mama 5: Bon Appétit! (3DS)</h4>
                         <p>Con más de 30 nuevas actividades como comprar y tareas domésticas, tenía SpotPass para personalizar el juego.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-6-sweet-shop-nintendo-3ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama Sweet Shop">
                     <div class="saga-info">
-                        <h4>Cooking Mama: Sweet Shop (3DS)</h4>
                         <p class="label">2014</p>
+                        <h4>Cooking Mama: Sweet Shop (3DS)</h4>
                         <p>Incluye 60 nuevas recetas de postres y más de 160 minijuegos, así como modo multijugador.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-cook-off-nintendo-wii-front-cover.jpg" class="saga-imagen" alt="Cooking Mama Cook Off">
                     <div class="saga-info">
-                        <h4>Cooking Mama: Cook Off (Wii)</h4>
                         <p class="label">2007</p>
+                        <h4>Cooking Mama: Cook Off (Wii)</h4>
                         <p>El primero de la saga en salir para el Wii, con un enfoque en la competencia entre jugadores de todo el mundo.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-world-kitchen-nintendo-wii-front-cover.jpg" class="saga-imagen" alt="Cooking Mama World Kitchen">
                     <div class="saga-info">
-                        <h4>Cooking Mama: World Kitchen (Wii)</h4>
                         <p class="label">2008</p>
+                        <h4>Cooking Mama: World Kitchen (Wii)</h4>
                         <p>Refinó los controles y añadió la posibilidad de retar a Mamá en un modo competición.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/cooking-mama-cookstar-nintendo-switch-front-cover.jpg" class="saga-imagen" alt="Cooking Mama Cookstar">
                     <div class="saga-info">
-                        <h4>Cooking Mama: Cookstar (switch)</h4>
                         <p class="label">2020</p>
+                        <h4>Cooking Mama: Cookstar (switch)</h4>
                         <p>El primer juego de la saga para la Switch incluye la opción de preparar recetas veganas.</p>
                     </div>
                 </li>
@@ -351,44 +356,44 @@
 
         <div class="sagas">
             <h3>Spin-offs</h3>
-            <ul>
+            <ul class="grid">
                 <li>
                     <img src="./img/gardening-mama-ds-front-cover.jpg" class="saga-imagen" alt="Gardening Mama">
                     <div class="saga-info">
-                        <h4>Gardening Mama (DS)</h4>
                         <p class="label">2009</p>
+                        <h4>Gardening Mama (DS)</h4>
                         <p>Se cambia los fogones por el jardín y usa un reloj en tiempo real para cuidar las plantas.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/gardening-mama-2-forest-friends-nintendo-3ds-front-cover.jpg" class="saga-imagen" alt="Gardening Mama 2">
                     <div class="saga-info">
-                        <h4>Gardening Mama 2: Forest Friends (3DS)</h4>
                         <p class="label">2014</p>
+                        <h4>Gardening Mama 2: Forest Friends (3DS)</h4>
                         <p>Continúa la aventura en el jardín permitiendo ayudar a los habitantes del pueblo.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/crafting-mama-ds-front-cover.jpg" class="saga-imagen" alt="Crafting Mama">
                     <div class="saga-info">
-                        <h4>Crafting Mama (DS)</h4>
                         <p class="label">2010</p>
+                        <h4>Crafting Mama (DS)</h4>
                         <p>Deja los cuchillos por las tijetas y explora el mundo de las manualidades.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/babysitting-mama-nintendo-wii-front-cover.jpg" class="saga-imagen" alt="Babysitting Mama">
                     <div class="saga-info">
-                        <h4>Babysitting Mama (Wii)</h4>
                         <p class="label">2010</p>
+                        <h4>Babysitting Mama (Wii)</h4>
                         <p>Incluía un peluche bebé en la caja con un hueco para el mando de Wii.</p>
                     </div>
                 </li>
                 <li>
                     <img src="./img/camping-mama-ds-front-cover.jpg" class="saga-imagen" alt="Camping Mama">
                     <div class="saga-info">
-                        <h4>Camping Mama: Outdoor Adventures (DS)</h4>
                         <p class="label">2011</p>
+                        <h4>Camping Mama: Outdoor Adventures (DS)</h4>
                         <p>El título más aventurero que mezcla cocina con exploración y decoración del campamento.</p>
                     </div>
                 </li>
@@ -397,69 +402,64 @@
                         
         <div class="sagas">
             <h3>Juegos en otras plataformas</h3>
-                <ul>                    
+                <ul class="grid">                    
                     <li>
                         <div class="saga-info">
+                            <p class="label">2009</p>
                             <h4>Cooking Mama Lite (mobile app)</h4>
-                            <p class="label">2009</p>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
+                            <p class="label">2009</p>
                             <h4>Cooking Mama (arcade)</h4>
-                            <p class="label">2009</p>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
-                            <h4>Gardening Mama (mobile app)</h4>
                             <p class="label">2010</p>
+                            <h4>Gardening Mama (mobile app)</h4>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
-                            <h4>Cooking Mama Friends Cafe (Facebook)</h4>
                             <p class="label">2012</p>
+                            <h4>Cooking Mama Friends Cafe (Facebook)</h4>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
-                            <h4>Cooking Mama: Let's Cook! (mobile app)</h4>
                             <p class="label">2015</p>
+                            <h4>Cooking Mama: Let's Cook! (mobile app)</h4>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
+                            <p class="label">2016</p>
                             <h4>Cooking Mama Let's Cook Puzzle (mobile app)</h4>
-                            <p class="label">2016</p>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
+                            <p class="label">2016</p>
                             <h4>Cooking Mama: Burger Shop (Facebook)</h4>
-                            <p class="label">2016</p>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
+                            <p class="label">2016</p>
                             <h4>Cooking Mama for d Kids (mobile app)</h4>
-                            <p class="label">2016</p>
                         </div>
                     </li>
                     <li>
                         <div class="saga-info">
-                            <h4>Cooking Mama: Cuisine! (Apple Arcade)</h4>
                             <p class="label">2022</p>
+                            <h4>Cooking Mama: Cuisine! (Apple Arcade)</h4>
                         </div>
                     </li>
                 </ul>        
         
     </section>
-
-
-    <h2>¿qué es cooking mama?</h2>
-    <p></p>
-    <blockquote></blockquote>
 
 
 </main>
