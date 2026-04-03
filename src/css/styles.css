@@ -415,7 +415,7 @@ a.button.externo, button.externo{
 
 
 
-figcaption{
+figcaption, blockquote p, div.video p.label{
     font-size: var(--figcaption-size);
     font-style: italic;
 }
@@ -878,7 +878,7 @@ a{
     object-fit: cover;
 }
 
-.video figcaption{
+.video p.label {
     margin: 1em auto;
     max-width: 100%;
 }
@@ -903,9 +903,9 @@ a{
     .detalle .grid {
         grid-template-columns: 1fr;
     }
-    .detalle .info-plato {
+    /* .detalle .info-plato {
         grid-column: 1fr;
-    }
+    } */
     .video  {
         grid-column: 1 / -1;
     }
