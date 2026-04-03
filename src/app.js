@@ -1,35 +1,66 @@
-const holi = 'world';
-console.log('Hello ' + holi);
+import Lenis from 'lenis';
+
+// SMOOTH SCROLL CON LENIS
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// const holi = 'world';
+// console.log('Hello ' + holi);
 
 
 // SCROLL CON ANIMACIÓN
 
-document.getElementById('top-button').addEventListener('click', scrollTop);
+document.getElementById('top-button').addEventListener('click', () => {
+    lenis.scrollTo(0);
+});
 
-function scrollTop(){
 
-    var currentScroll = document.documentElement.scrollTop;
+// function scrollTop(){
+//     var currentScroll = document.documentElement.scrollTop;
     
-    if(currentScroll > 50){
-        window.requestAnimationFrame(scrollTop);
-        window.scrollTo(0, currentScroll - (currentScroll/8));
-    }
-}
+//     if(currentScroll > 50){
+//         window.requestAnimationFrame(scrollTop);
+//         window.scrollTo(0, currentScroll - (currentScroll/8));
+//     }
+// }
 
 // BOTON QUE DESAPARECE
 
-buttonTop = document.getElementById('top-button');
+const buttonTop = document.getElementById('top-button');
 
-window.onscroll = function() {
-    var scroll = document.documentElement.scrollTop;
+if (buttonTop) {
+    buttonTop.addEventListener('click', () => {
+        lenis.scrollTo(0);
+    });
 
-    if(scroll > 200){
-        buttonTop.style.transform = "scale(1)";
-
-    }else{
-        buttonTop.style.transform = "scale(0)";
+    window.onscroll = function() {
+        var scroll = document.documentElement.scrollTop;
+        if (scroll > 200) {
+            buttonTop.style.transform = "scale(1)";
+        } else {
+            buttonTop.style.transform = "scale(0)";
+        }
     }
 }
+
+// window.onscroll = function() {
+//     var scroll = document.documentElement.scrollTop;
+
+//     if(scroll > 200){
+//         buttonTop.style.transform = "scale(1)";
+
+//     }else{
+//         buttonTop.style.transform = "scale(0)";
+//     }
+// }
 
 // HEADER Y FOOTER
 
