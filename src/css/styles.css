@@ -976,3 +976,20 @@ a{
 .scroll-top:hover { 
     transform: translate(-2px,-2px); 
     box-shadow: 5px 5px 0 var(--marron-oscuro); } */
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* para saltar al contenido principal */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--marron-oscuro);
+    color: var(--blanco);
+    padding: 8px 16px;
+    z-index: 100;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
+}

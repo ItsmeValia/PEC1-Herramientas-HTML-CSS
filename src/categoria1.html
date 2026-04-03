@@ -4,16 +4,19 @@
 <meta charset="utf-8" />
 <title>Libro 1</title>
 <link rel="stylesheet" href="css/styles.css">
-<link rel="icon" type="img/png" href="img/mama-icon.png" />
+<link rel="icon" type="image/png" href="img/mama-icon.png" />
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
 
 <header>
     <include src="partials/header.html"></include>
 </header>
     
 
-<section class="categoría-recetas cuadros">
+<section class="categoría-recetas cuadros" id="main-content">
 
 <h2>Libro 1: Recetas de carne de res</h2>
     <div class="recetas">
@@ -40,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a aria-disabled="true" href="">
                     <img src="./img/Beef_Stewed_CM_04.webp" class="receta-imagen" alt="Beef Stewed CM">
                     <div class="receta-info">
                         <p class="label">7 pasos</p>
@@ -50,7 +53,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a aria-disabled="true" href="">
                     <img src="./img/Japanese_Steak_CM_22.webp" class="receta-imagen" alt="Japanese Steak CM">
                     <div class="receta-info">
                         <p class="label">7 pasos</p>
@@ -72,7 +75,7 @@
     <include src="partials/footer.html"></include>
 </footer>
 
-<a id="top-button" class="top button"><img src="img/icons8-flecha-contraer-64.png" alt="Volver arriba"></a>
+<a id="top-button" class="top button"><img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""></a>
 
 <script type="module" src="app.js"></script>
 

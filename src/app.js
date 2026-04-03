@@ -1,5 +1,8 @@
 import Lenis from 'lenis';
 
+// const holi = 'world';
+// console.log('Hello ' + holi);
+
 // SMOOTH SCROLL CON LENIS
 const lenis = new Lenis({
     duration: 1.2,
@@ -12,8 +15,6 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-// const holi = 'world';
-// console.log('Hello ' + holi);
 
 
 // SCROLL CON ANIMACIÓN
@@ -23,14 +24,6 @@ document.getElementById('top-button').addEventListener('click', () => {
 });
 
 
-// function scrollTop(){
-//     var currentScroll = document.documentElement.scrollTop;
-    
-//     if(currentScroll > 50){
-//         window.requestAnimationFrame(scrollTop);
-//         window.scrollTo(0, currentScroll - (currentScroll/8));
-//     }
-// }
 
 // BOTON QUE DESAPARECE
 
@@ -51,16 +44,6 @@ if (buttonTop) {
     }
 }
 
-// window.onscroll = function() {
-//     var scroll = document.documentElement.scrollTop;
-
-//     if(scroll > 200){
-//         buttonTop.style.transform = "scale(1)";
-
-//     }else{
-//         buttonTop.style.transform = "scale(0)";
-//     }
-// }
 
 // HEADER Y FOOTER
 

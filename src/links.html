@@ -2,19 +2,23 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
-<title>My little cookbook</title>
+<title>Enlaces</title>
 <link rel="stylesheet" href="css/styles.css">
-<!-- <link rel="icon" type="imagen/svg" href="img/favicon.png" /> -->
+<link rel="icon" type="image/png" href="img/mama-icon.png" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <header>
-        <include src="partials/header.html"></include>
-    </header>
+
+<header>
+    <include src="partials/header.html"></include>
+</header>
         
-<section class="links cuadros">
+<section class="links cuadros" id="main-content">
     <h2>ENLACES</h2>
-    <p>La mayoría de información y recursos empleados para la realización de esta página proviene de la wiki del propio fandom del juego.</p>
+    <p>La mayoría de información y recursos empleados para la realización de esta página proviene de la wiki del propio fandom del juego. 
+        <br> Todos los recursos empleados en esta página pueden emplearse siempre que no sea con fines comerciales. 
+        <br>No todas las imágenes se encuentran en formatos clásicos, algunas de ellas están en formato webp.</p>
     <h3>Información y recetas</h3>
     <ul>      
         <li><a href="https://www.nintendo.com/es-es/Juegos/Nintendo-DS/Cooking-Mama-270330.html">Información sobre Cooking Mama de la página de Nintendo</a></li>
@@ -43,6 +47,8 @@
     <footer>
         <include src="partials/footer.html"></include>
     </footer>
+
+<a id="top-button" class="top button"><img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""></a>
 
 <script type="module" src="app.js"></script>
 
