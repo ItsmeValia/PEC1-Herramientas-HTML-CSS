@@ -7,38 +7,72 @@
 <!-- <link rel="icon" type="imagen/svg" href="img/favicon.png" /> -->
 </head>
 <body>
-    <script src="app.js"></script>
 
-    <header>
-        <include src="partials/header.html"></include>
-    </header>
-        
-
+<header>
+    <include src="partials/header.html"></include>
+</header>
     
-    <h1>Libro 1: Recetas de carne de res</h1>
 
-    <ul>
-        <li>
-            <!-- <img src="" alt=""> -->
-            <h2></h2>
-            <p></p>
-        </li>
-        <li>
-            <!-- <img src="" alt=""> -->
-            <h2></h2>
-            <p></p>
-        </li>
-        <li>
-            <!-- <img src="" alt=""> -->
-            <h2></h2>
-            <p></p>
-        </li>
-    </ul>
+<section class="categoría cuadros">
+
+<h2>Libro 1: Recetas de carne de res</h2>
+    <div class="recetas">
+        <h3>Saga original</h3>
+        <ul class="grid">
+            <li>
+                <a href="det1.html">             
+                    <img src="./img/Bistec_Salisbury_CM_01.webp" class="saga-imagen" alt="bistec Salisbury CM">
+                    <div class="receta-info">
+                        <p class="label">10 pasos</p>
+                        <h4>Salisbury Steak</h4>
+                        <p>Un trozo de carne oblongo hecho de varias carnes y verduras combinadas y cocinadas en una sartén, con o sin salsa, y servido con varias verduras.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="det2.html">
+                    <img src="./img/Japanese_Hamburg_Steak_CM_02.webp" class="saga-imagen" alt="Japanese Hamburg Steak CM">
+                    <div class="receta-info">
+                        <p class="label">2007</p>
+                        <h4>Japanese Hamburg Steak</h4>
+                        <p>Juego multijugador donde conoces a los amigos de Mamá y decora tus recetas con stikers.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./img/cooking-mama-3-shop-and-chop-nintendo-ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 3">
+                    <div class="receta-info">
+                        <p class="label">2009</p>
+                        <h4>Estofado de carne de res</h4>
+                        <p>Encarnando a la hija de Mamá, puedes ir al supermercado y comprar los ingredientes para preparar tus recetas.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./img/cooking-mama-4-kitchen-magic-nintendo-3ds-front-cover.jpg" class="saga-imagen" alt="Cooking Mama 4">
+                    <div class="receta-info">
+                        <p class="label">2011</p>
+                        <h4>Churrasco</h4>
+                        <p>El primero de la saga en salir para la 3DS, en la preventa del juego podías conseguir un peluche de Mamá.</p>
+                    </div>    
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+</section>
 
 
-    <footer>
-        <include src="partials/footer.html"></include>
-    </footer>
+
+
+<footer>
+    <include src="partials/footer.html"></include>
+</footer>
+
+<script src="app.js"></script>
 
 </body>
 </html>

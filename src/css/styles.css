@@ -127,23 +127,26 @@ main{
 
 
 header, footer{
-    width: 100%;
+    width: 100vw;
     color: var(--blanco);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    margin-right: auto; 
-    margin-left: auto; 
-    padding-right: 25px;
-    padding-left: 25px;
-    
+header > *, footer > *{
+    width: 100%;
+    max-width: 800px;
+    padding: 0 25px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-header div, footer div{
-    width: 100%;
-    padding: 2em 0;
-}
+
+
 header{
     background: linear-gradient(120deg, var(--rojo), var(--rosa));
     background-image: 
@@ -166,11 +169,21 @@ footer{
             var(--transparencia-negro) 2px,
             var(--transparencia-negro) 4px
         ),
-        linear-gradient(60deg, var(--verde), var(--rosa));
+        linear-gradient(60deg, var(--rosa), var(--rojo));
+}
+header, footer div{
+    width: 100%;
+    padding: 2em 0;
+    display: grid;
+    gap: 20px;
+}
+footer p, footer a{
+    color: var(--blanco);
 }
 
 
-section {
+
+section{
     width: 100vw;
     padding: 1em 0;
 }
@@ -187,38 +200,37 @@ section > * {
 
 /* ---------------------------------------------------------------------------------------------------- */
 
-ul.grid{
+.grid{
     display: grid;
-    /* align-items: top; */
-    /* gap: 0rem; */
 }
 
 /* Móvil*/
 @media (max-width: 767px) {
-    footer .grid{
+    footer div{
         grid-template-columns: 1fr;
     }
-    header{
+    header div{
         grid-template-columns: 1fr;
     }
 }
 /* Tablet*/
 @media (min-width: 768px) and (max-width: 1023px) {
-    footer .grid{
+    footer div{
         grid-template-columns: 1fr 1fr;
     }
-    header .grid{
-        grid-template-columns: 1fr;
+    header div{
+        grid-template-columns: 1fr 1fr;
     }
 }
 /* Ordenador*/
 @media (min-width: 1024px) {
-    footer, footer .grid{
-        grid-template-columns: 4fr ;
+    footer div{
+        grid-template-columns: 1fr 1fr;
     }
-    header .grid{
-        grid-template-columns: 1fr ;
+    header {
+        grid-template-columns: 1fr 1fr;
     }
+
 }
 
 
@@ -255,8 +267,11 @@ h4{
     text-align: center;
 }
 
+.links, .links h4{
+    padding: 2em 0;
+}
 
-p.label{
+p.label, figcaption.label{
     font-size: var(--label-size);
     font-weight: var(--fw-bold);
     text-transform: uppercase; 
@@ -300,7 +315,7 @@ div.intro p{
 header .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0;
     text-decoration: none;
     color: var(--blanco);
     flex-shrink: 0;
@@ -318,7 +333,13 @@ header .logo img {
     width: auto;
     margin: 0;
 }
-
+header .botones-nav {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
 
 
 .botones-nav { 
@@ -427,7 +448,7 @@ a{
         linear-gradient(120deg, var(--rojo), var(--rosa));
 }
 .liso{
-    background: linear-gradient(0deg, var(--rosa), var(--rosa-claro));
+    background: linear-gradient(45deg, var(--rosa), var(--rosa-claro));
 }
 /* ---------------------------------------------------------------------------------------------------- */
 
@@ -465,7 +486,7 @@ a{
 }
 
 
-.info-juego blockquote {
+.info-juego blockquote, .ingredientes {
     position: relative;
     margin: 30px auto 40px;
     padding: 20px 20px 20px 40px;
@@ -491,7 +512,7 @@ a{
     line-height: 1.5;
     /* font-style: italic; */
 }
-.info-juego blockquote::before {
+.info-juego blockquote::before, .ingredientes::before {
     content: '';
     position: absolute;
     left: 20px;
@@ -505,7 +526,7 @@ a{
         transparent
     );
 }
-.info-juego blockquote::after {
+.info-juego blockquote::after, .ingredientes::after {
     content: '';
     position: absolute;
     top: -10px;
@@ -716,45 +737,50 @@ a{
 
 /* ---------------------------------------------------------------------------------------------------- */
 
-/* sagas */
-.info-saga {
-  padding-top: 1rem;
-  padding-bottom: 4rem;
+/* sagas y recetas */
+.info-saga, .info-receta {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
 }
 
-.sagas ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 32px;
-  list-style: none;
+.sagas ul, .recetas ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    list-style: none;
 }
 
-.sagas li {
-  width: 220px;
-
-
-  background: var(--blanco);
-  border-radius: 12px;
-  border: 3px solid var(--marron-oscuro);
-  overflow: hidden;
-  box-shadow: 4px 4px 0 var(--marron-oscuro);
-  transition: all 0.2s;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+.sagas li{
+    width: 220px;
 }
-.sagas p.label{
+.receta li{
+    width: 280px;
+}
+.sagas li, .recetas li {
+    background: var(--blanco);
+    border-radius: 12px;
+    border: 3px solid var(--marron-oscuro);
+    overflow: hidden;
+    box-shadow: 4px 4px 0 var(--marron-oscuro);
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sagas p.label, .recetas p.label{
     margin-top: 0px ;
 }
 
-.sagas li:hover { 
-  transform: translate(-3px,-3px); 
-  box-shadow: 7px 7px 0 var(--marron-oscuro); 
+.sagas li:hover, .recetas li:hover { 
+    transform: translate(-3px,-3px); 
+    box-shadow: 7px 7px 0 var(--marron-oscuro); 
 }
 
 /* Imagen de portada */
-.saga-imagen {
+.saga-imagen, .receta-imagen {
     width: 100%;
     height: 160px;
     object-fit: cover;
@@ -763,15 +789,16 @@ a{
     background: var(--rosa-claro);
 }
 
+
 /* Información de la saga */
-.saga-info { 
+.saga-info, .receta-info { 
     padding: 12px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.saga-info h4 { 
+.saga-info h4, .receta-info h4 { 
     font-family: var(--title-font);
     font-size: 1rem; 
     color: var(--marron-oscuro); 
@@ -779,9 +806,82 @@ a{
     font-weight: 700;
 }
 
-.saga-info p { 
+.saga-info p, .receta-info p { 
     font-size: 0.75rem; 
     line-height: 1.4;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ingredientes */
+.checkbox{
+    display: flex;
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px;
+}
+.ingredientes{
+    max-width: 400px;
+}
+.ingredientes li {
+    list-style: none;
+    padding-bottom: .25rem;
+}
+
+.info-plato h3, .ingredientes h3, .pasos h3 {
+    margin: .5rem 0;
+}
+
+
+.info-plato, .pasos {
+    background: var(--blanco);
+    border-radius: 16px;
+    border: 3px solid var(--marron-oscuro);
+    padding: 24px;
+    box-shadow: 4px 4px 0 var(--marron-oscuro);
+    position: relative;
+    overflow: hidden;
+}
+.foto_video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.foto_video figcaption{
+    margin: 0 auto 1em;
+    max-width: 50%;
+}
+.foto_video img, .foto_video iframe {
+    width: 100%;
+    max-width: 50%;
+    margin: 1rem auto 0rem;
+    border-radius: 16px;
+    border: 3px solid var(--marron-oscuro);
+    box-shadow: 4px 4px 0 var(--marron-oscuro);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+/* .receta{
+    display: flex;
+    justify-content: center;
+} */
+
+@media (max-width: 480px) {
+    .receta .grid div{
+        grid-template-columns: 1fr ;
+    }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+    .receta .grid div{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1024px) {
+    .receta .grid div{
+        grid-template-columns: 1fr 1fr ;
+    }
 }
 
 
@@ -790,22 +890,22 @@ a{
 /* flecha top */
 
 #top-button {
-  position: fixed;
-  bottom: 20px; 
-  right: 20px;
-  width: 50px; 
-  height: 50px;
-  border-radius: 50%;
-  background: var(--marron-oscuro);
-  color: var(--blanco);
-  border: 3px solid var(--marron-oscuro);
-  cursor: pointer;
-  box-shadow: 3px 3px 0 var(--marron-oscuro);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 50;
-  transition: all 0.2s ease;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    background: var(--marron-oscuro);
+    color: var(--blanco);
+    border: 3px solid var(--marron-oscuro);
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--marron-oscuro);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 50;
+    transition: all 0.2s ease;
 
-  transform: scale(0);
+    transform: scale(0);
 }
 #top-button img {
     width: 70%;
