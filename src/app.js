@@ -45,6 +45,27 @@ if (buttonTop) {
 }
 
 
+// ANIMACIÓN DEL LOGO AL HACER CLICK
+
+const logoImg = document.getElementById('logo-img');
+const logoLink = logoImg?.parentElement;
+
+if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+        e.preventDefault(); // Previene la navegación
+
+        // Agrega la clase de rotación
+        logoImg.classList.add('spin-animation');
+
+        // Después de 0.5 segundos, remueve la clase y navega
+        setTimeout(() => {
+            logoImg.classList.remove('spin-animation');
+            window.location.href = logoLink.href;
+        }, 500);
+    });
+}
+
+
 // HEADER Y FOOTER
 
 // async function loadPartial(selector, url) {

@@ -37,8 +37,13 @@
 
 
         <div class="foto principal">
-            <img src="img/Bistec_Salisbury_CM_01.webp" alt="Salisbury Steak">
-            <!-- <figcaption class="label">Salisbury Steak del juego Cooking Mama</figcaption> -->
+            <!-- <img src="img/Bistec_Salisbury_CM_01.webp" alt="Salisbury Steak"> -->
+            <img src="img/Bistec_Salisbury_CM_01.webp" 
+                srcset="img-opt/Bistec_Salisbury_CM_01-300.webp 300w,
+                        img-opt/Bistec_Salisbury_CM_01-600.webp 600w,
+                        img-opt/Bistec_Salisbury_CM_01-900.webp 900w"
+            alt="Salisbury Steak">
+
         </div>
 
         <div class="ingredientes">
@@ -71,7 +76,15 @@
         </div>
 
         <div class="foto">
-            <img src="img/Bistec_Salisbury_S_001m.webp" alt="Salisbury Steak rl">
+            <picture>
+                <!-- Para movil: imagen optimizada para 300px -->
+                <source media="(max-width: 480px)" srcset="img-opt/Bistec_Salisbury_S_001m-cuadrado.webp" type="image/webp">
+                <!-- Para tablet: imagen optimizada para 600px -->
+                <source media="(min-width: 481px) and (max-width: 1023px)" srcset="img-opt/Bistec_Salisbury_S_001m-tablet.webp" type="image/webp">
+                <!-- Para desktop: imagen optimizada para 900px -->
+                <source media="(min-width: 1024px)" srcset="img-opt/Bistec_Salisbury_S_001m-900.webp" type="image/webp">
+                <img src="img/Bistec_Salisbury_S_001m.webp" alt="Salisbury Steak rls">
+            </picture>
             <!-- <figcaption class="label">Salisbury Steak</figcaption> -->
         </div>
         <div class="foto">

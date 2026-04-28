@@ -993,3 +993,13 @@ a{
 .skip-link:focus {
     top: 0;
 }
+
+/* ANIMACIÓN DE ROTACIÓN DEL LOGO */
+#logo-img.spin-animation {
+    animation: spin-logo 0.5s ease-in-out;
+}
+
+@keyframes spin-logo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
