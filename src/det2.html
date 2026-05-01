@@ -38,7 +38,6 @@
         <div class="foto principal">
             
             <!-- <img src="img/Japanese_Hamburg_Steak_CM_02.webp" alt="Japanese Hamburg Steak"> -->
-          
             <picture>
                 <!-- Para movil -->
                 <source media="(max-width: 480px)" 
@@ -97,7 +96,6 @@
         <div class="foto">
 
             <!-- <img src="img/Japanese_Hamburg_Steak_200710001.webp" alt="Japanese Hamburg Steak rl"> -->
-
             <picture>
                 <!-- Para movil-->
                 <source media="(max-width: 480px)" 
@@ -120,7 +118,6 @@
         <div class="foto">
 
             <!-- <img src="img/Japanese_Hamburg_Steak_hambagu-20.jpg" alt="Japanese Hamburg Steak rl"> -->
-
             <picture>
                 <!-- Para movil-->
                 <source media="(max-width: 480px)" 
@@ -166,7 +163,16 @@
     <include src="partials/footer.html"></include>
 </footer>
 
-<a id="top-button" class="top button"><img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""></a>
+<a id="top-button" class="top button">
+    <!-- <img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""> -->
+    <img aria-label="Volver arriba" 
+        src="img/icons8-flecha-contraer-64.png" 
+        srcset="
+        img-opt/icons8-flecha-contraer-64-300.webp 300w,
+        img-opt/icons8-flecha-contraer-64-600.webp 600w,
+        img-opt/icons8-flecha-contraer-64-900.webp 900w"
+        alt="">
+</a>
 
 <script type="module" src="app.js"></script>
 

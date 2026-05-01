@@ -522,8 +522,7 @@ a{
     font-size: var(--base-font-size);
     text-align: left;
     line-height: 1.5;
-    /* font-style: italic; */
-}
+    /* font-style: italic; */}
 .info-juego blockquote::before, .ingredientes::before, .pasos::before {
     content: '';
     position: absolute;
@@ -550,6 +549,43 @@ a{
     border-radius: 2px;
     transform: rotate(25deg);
     box-shadow: 0 2px 4px var(--transparencia-negro);
+
+    /* RECORTE CON CLIP-PATH */
+    clip-path: polygon(
+        /* Borde superior */
+        0% 0%, 100% 0%,
+        /* Borde derecho */
+        100% 0%,
+        97% 4%, 100% 8%,
+        97% 12%, 100% 16%,
+        97% 20%, 100% 24%,
+        97% 28%, 100% 32%,
+        97% 36%, 100% 40%,
+        97% 44%, 100% 48%,
+        97% 52%, 100% 56%,
+        97% 60%, 100% 64%,
+        97% 68%, 100% 72%,
+        97% 76%, 100% 80%,
+        97% 84%, 100% 88%,
+        97% 92%, 100% 96%,
+        97% 100%,
+        /* Borde inferior */
+        0% 100%,
+        /* Borde izquierdo */
+        3% 96%, 0% 92%,
+        3% 88%, 0% 84%,
+        3% 80%, 0% 76%,
+        3% 72%, 0% 68%,
+        3% 64%, 0% 60%,
+        3% 56%, 0% 52%,
+        3% 48%, 0% 44%,
+        3% 40%, 0% 36%,
+        3% 32%, 0% 28%,
+        3% 24%, 0% 20%,
+        3% 16%, 0% 12%,
+        3% 8%, 0% 4%,
+        3% 0%
+    );
 }
 
 
@@ -994,12 +1030,60 @@ a{
     top: 0;
 }
 
-/* ANIMACIÓN DE ROTACIÓN DEL LOGO */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* ANIMACIÓN DE ROTACIÓN DEL LOGO
 #logo-img.spin-animation {
     animation: spin-logo 0.5s ease-in-out;
 }
+
+
+@keyframes spin-logo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+/* ANIMACIÓN DE ROTACIÓN DEL LOGO */
+/* #logo-img.spin-animation {
+    animation: spin-logo 0.5s ease-in-out;
+} */
+
+
+
+
+
+/* ANIMACIONES DE LA ESTRELLA */
+
+.svg-estrella {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.25rem 0rem 1rem 0rem;
+}
+
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%       { transform: translateY(-5px) rotate(2deg); }
+}
+
+.svg-estrella svg {
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 0px var(--marron-oscuro));
+}
+
 
 @keyframes spin-logo {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+#svg-estrella.spin-animation svg {
+    animation: spin-logo 0.5s ease-in-out;
+}
+
+
+
+

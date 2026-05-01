@@ -56,7 +56,7 @@
             </picture>
         </div>
 
-        <div class="ingredientes">
+        <div class="ingredientes" >
             <h3>Ingredientes</h3>
             <ul>
                 <li><label><input type="checkbox" >Cebolla</label></li>
@@ -158,7 +158,16 @@
     <include src="partials/footer.html"></include>
 </footer>
 
-<a id="top-button" class="top button"><img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""></a>
+<a id="top-button" class="top button">
+    <!-- <img src="img/icons8-flecha-contraer-64.png" aria-label="Volver arriba" alt=""> -->
+    <img aria-label="Volver arriba" 
+        src="img/icons8-flecha-contraer-64.png" 
+        srcset="
+        img-opt/icons8-flecha-contraer-64-300.webp 300w,
+        img-opt/icons8-flecha-contraer-64-600.webp 600w,
+        img-opt/icons8-flecha-contraer-64-900.webp 900w"
+        alt="">
+</a>
 
 <script type="module" src="app.js"></script>
 

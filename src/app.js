@@ -47,22 +47,36 @@ if (buttonTop) {
 
 
 
-// ANIMACIÓN DEL LOGO AL HACER CLICK
+// // ANIMACIÓN DEL LOGO AL HACER CLICK
 
-const logoImg = document.getElementById('logo-img');
-const logoLink = logoImg?.parentElement;
+// const logoImg = document.getElementById('logo-img');
+// const logoLink = logoImg?.parentElement;
 
-if (logoLink) {
-    logoLink.addEventListener('click', (e) => {
-        e.preventDefault(); // Previene la navegación
+// if (logoLink) {
+//     logoLink.addEventListener('click', (e) => {
+//         e.preventDefault(); // Previene la navegación
 
-        // Agrega la clase de rotación
-        logoImg.classList.add('spin-animation');
+//         // Agrega la clase de rotación
+//         logoImg.classList.add('spin-animation');
 
-        // Después de 0.5 segundos, remueve la clase y navega
+//         // Después de 0.5 segundos, remueve la clase y navega
+//         setTimeout(() => {
+//             logoImg.classList.remove('spin-animation');
+//             window.location.href = logoLink.href;
+//         }, 500);
+//     });
+// }
+
+// ANIMACIÓN ESTRELLAS AL HACER CLICK
+
+const starsvg = document.getElementById('svg-estrella');
+
+if (starsvg) {
+    starsvg.addEventListener('click', () => {
+        starsvg.classList.add('spin-animation');
+
         setTimeout(() => {
-            logoImg.classList.remove('spin-animation');
-            window.location.href = logoLink.href;
+            starsvg.classList.remove('spin-animation');
         }, 500);
     });
 }
