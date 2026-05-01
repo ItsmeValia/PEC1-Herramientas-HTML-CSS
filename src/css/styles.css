@@ -79,12 +79,12 @@
 
 }
 
-body {
+/* body {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 * {
     margin: 0; 
@@ -418,6 +418,10 @@ a.button.externo, button.externo{
 figcaption, blockquote p, div.video p.label{
     font-size: var(--figcaption-size);
     font-style: italic;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 iframe{
@@ -800,10 +804,10 @@ a{
 }
 
 .sagas li {
-    width: 220px;
+    width: clamp(160px, 45vw, 220px);
 }
 .receta li{
-    width: 220px;
+    width: clamp(160px, 45vw, 220px);
 }
 .libros-recetas{
     padding-bottom: 2rem ;
