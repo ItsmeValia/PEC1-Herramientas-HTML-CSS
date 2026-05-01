@@ -45,6 +45,8 @@ if (buttonTop) {
 }
 
 
+
+
 // ANIMACIÓN DEL LOGO AL HACER CLICK
 
 const logoImg = document.getElementById('logo-img');
