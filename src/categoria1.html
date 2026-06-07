@@ -119,7 +119,7 @@
                 <a aria-disabled="true" tabindex="-1">
 
                     <!-- <img src="./img/Japanese_Steak_CM_22.webp" class="receta-imagen" alt="Japanese Steak CM"> -->
-                    <img class="receta-imagen"
+                    <!-- <img class="receta-imagen"
                         src="img-opt/Japanese_Steak_CM_22-300.webp" 
                         srcset="
                         img-opt/Japanese_Steak_CM_22-300.webp 300w,
@@ -130,7 +130,27 @@
                         width="300" height="300"
                         loading="lazy"
                         
-                        alt="Japanese Steak CM">
+                        alt="Japanese Steak CM"> -->
+
+                    <picture class="receta-imagen">
+                        <!-- Para movil-->
+                        <source media="(max-width: 480px)" 
+                            srcset="img-opt/Japanese_Steak_CM_22-300.webp" 
+                            type="image/webp">
+                        <!-- Para tablet: imagen optimizada para 600px -->
+                        <source media="(min-width: 481px) and (max-width: 1023px)" 
+                            srcset="img-opt/Japanese_Steak_CM_22-600.webp" 
+                            type="image/webp">
+                        <!-- Para desktop: imagen optimizada para 900px -->
+                        <source media="(min-width: 1024px)" 
+                            srcset="img-opt/Japanese_Steak_CM_22-900.webp" 
+                            type="image/webp">
+                        <!-- Imagen por defecto -->
+                        <img src="img-opt/Japanese_Steak_CM_22-300.webp" alt="Salisbury Steak rl"
+                        
+                        loading="lazy">
+                    </picture>
+
 
                     <div class="receta-info">
                         <p class="label">7 pasos</p>
